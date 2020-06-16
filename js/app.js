@@ -58,22 +58,20 @@ function endGame(draw) {
   if (draw) {
     winningMessageTextElement.innerText = "Draw!";
   } else {
-    winningMessageTextElement.innerText = winner();
+    winningMessageTextElement.innerText = `${circleTurn ? "O's " : "X's "} Wins!`;
   }
   winningMessageElement.classList.add("show");
 }
 
 function isDraw() {
   return [...cellElements].every((cell) => {
-    return (
-      cell.classList.contains(X_CLASS) || cell.classList.contains(CIRCLE_CLASS)
-    );
+    return (cell.classList.contains(X_CLASS) || cell.classList.contains(CIRCLE_CLASS));
   });
 }
 
-function winner() {
-  return (circleTurn ? "O's " : "X's ") + "Wins!";
-}
+// function winner() {
+//   return ()";
+// }
 
 function placeMark(cell, currentClass) {
   cell.classList.add(currentClass);
