@@ -69,10 +69,6 @@ function isDraw() {
   });
 }
 
-// function winner() {
-//   return ()";
-// }
-
 function placeMark(cell, currentClass) {
   cell.classList.add(currentClass);
 }
